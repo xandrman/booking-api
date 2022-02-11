@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CustomerController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +16,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('customer', CustomerController::class)->except(['create', 'edit']);
+Route::resource('booking', BookingController::class)->except(['create', 'edit']);
