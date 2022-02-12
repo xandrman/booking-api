@@ -11,7 +11,10 @@ class BookingBusyException extends Exception
     public function render(): JsonResponse
     {
         return response()->json([
-            'message' => 'The given dates busy.'
+            'message' => 'The given dates busy.',
+            'errors' => [
+                'dates' => 'The given dates busy.',
+            ]
         ], 422);
     }
 }
